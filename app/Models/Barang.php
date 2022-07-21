@@ -9,7 +9,7 @@ class Barang extends Model
 {
     use HasFactory;
 
-    public $fillable = ['nama_pembeli','tanggal_pembeli','nama_barang','harga_satuan','jumlah_barang','total_harga'];
-
+    public $fillable = ['nama_pembeli', 'tanggal_pembelian', 'nama_barang', 'harga_satuan', 'jumlah_barang', 'total_harga'];
+    
     public $timestamps = true;
 }

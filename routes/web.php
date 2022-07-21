@@ -1,8 +1,8 @@
 <?php
 
-//panggil controller Siswa
+// panggil controller Siswa
 use App\Http\Controllers\SiswaController;
-//panggil controller Barang
+// panggil controller Barang
 use App\Http\Controllers\BarangController;
 use Illuminate\Support\Facades\Route;
 
@@ -26,7 +26,13 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 // route siswa
-Route::resource('siswa',SiswaController::class);
+Route::resource('siswa', SiswaController::class);
 
 // route barang
-Route::resource('barang',BarangController::class);
+Route::resource('barang', BarangController::class);
+
+// test template
+Route::get('test-template', function () {
+    return view('layouts.admin');
+
+});

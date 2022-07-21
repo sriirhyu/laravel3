@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app2')
 
 @section('content')
     <div class="container">
@@ -18,12 +18,13 @@
                             <table class="table align-middle" id="dataTable">
                                 <thead>
                                     <tr>
+                                        <th>No</th>
                                         <th>Nama Pembeli</th>
                                         <th>Tanggal Pembelian</th>
                                         <th>Nama Barang</th>
                                         <th>Harga Satuan</th>
                                         <th>Jumlah Barang</th>
-                                        <th>Total Harga</th>
+                                        <th>Total harga</th>
                                         <th>Aksi</th>
                                     </tr>
                                 </thead>
@@ -35,9 +36,9 @@
                                             <td>{{ $data->nama_pembeli }}</td>
                                             <td>{{ date('d M Y', strtotime($data->tanggal_pembelian)) }}</td>
                                             <td>{{ $data->nama_barang }}</td>
-                                            <td>{{ $data->harga_satuan }}</td>
+                                            <td>Rp. {{ number_format($data->harga_satuan,0,',','.') }}</td>
                                             <td>{{ $data->jumlah_barang }}</td>
-                                            <td>{{ $data->total_harga }}</td>
+                                            <td>Rp. {{ number_format($data->total_harga,0,',','.') }}</td>
                                             <td>
                                                 <form action="{{ route('barang.destroy', $data->id) }}" method="post">
                                                     @csrf

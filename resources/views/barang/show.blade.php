@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app2')
 
 @section('content')
     <div class="container">
@@ -11,32 +11,32 @@
                     <div class="card-body">
                         <div class="mb-3">
                             <label class="form-label">Nama Pembeli</label>
-                            <input type="text" class="form-control " name="nama_pembeli" value="{{ $siswa->nama }}" readonly>
+                            <input type="text" class="form-control " name="nama_pembeli" value="{{ $barang->nama_pembeli }}" readonly>
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Tanggal Pembelian</label>
-                            <input type="text" class="form-control " name="tanggal_pembelian" value="{{ $siswa->nis }}" readonly>
+                            <input type="text" class="form-control " name="tanggal_pembelian" value="{{ $barang->tanggal_pembelian }}" readonly>
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Nama Barang</label>
-                            <input type="text" class="form-control " name="nama_barang" value="{{ $siswa->jenis_kelamin }}"
+                            <input type="text" class="form-control " name="nama_barang" value="{{ $barang->nama_barang }}"
                                 readonly>
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Harga Satuan</label>
-                            <input type="text" class="form-control " name="harga_satuan" value="{{ $siswa->agama }}"
+                            <input type="text" class="form-control " name="nis" value="{{ $barang->harga_satuan }}"
                                 readonly>
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Jumlah Barang</label>
-                            <input type="text" class="form-control" name="jumlah_barang" value="{{ $siswa->tgl_lahir }}"
+                            <input type="text" class="form-control" name="jumlah_barang" value="{{ $barang->jumlah_barang }}"
                                 readonly>
 
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Total Harga</label>
-                            <textarea class="form-control" name="total_harga" readonly>{{ $siswa->alamat }}</textarea>
-
+                            <input type="text" class="form-control" name="total_harga" value="{{ $barang->total_harga }}"
+                                readonly>
                         </div>
                         <div class="mb-3">
                             <div class="d-grid gap-2">
