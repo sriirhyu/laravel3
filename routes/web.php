@@ -4,6 +4,9 @@
 use App\Http\Controllers\SiswaController;
 // panggil controller Barang
 use App\Http\Controllers\BarangController;
+// panggil controller Wali
+
+use App\Http\Controllers\WaliController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,6 +19,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -33,8 +37,7 @@ Route::get('/', function(){
     return view('admin.index');
 });
 Route::resource('siswa', SiswaController::class);
-
-// route barang
 Route::resource('barang', BarangController::class);
+Route::resource('wali', WaliController::class);
 
 });
